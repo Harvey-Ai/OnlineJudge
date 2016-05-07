@@ -9,8 +9,8 @@ if [ "$RSYNC_MODE" = "master" ]; then
     rsync --daemon --config=/etc/rsyncd/rsyncd.conf
 else
     chmod 600 /OnlineJudge/dockerfiles/test_case_rsync/rsyncd.passwd
-    /bin/bash /code/rsync.sh
-    echo "* * * * * /bin/bash /code/rsyncd.sh" > /tmp/crontab.conf
+    /bin/bash /code/rsyncd.sh
+    echo "* * * * * /bin/bash /code/rsync.sh" > /tmp/crontab.conf
     crontab /tmp/crontab.conf
 fi
 
