@@ -4,6 +4,8 @@ oj_rsync_master:
         - /home/OnlineJudge:/OnlineJudge
         - /home/test_case:/OnlineJudge/test_case
         - /home/log:/code/log
+    ports:
+        - "0.0.0.0:873:873"
     environment:
         - RSYNC_MODE=master
 
