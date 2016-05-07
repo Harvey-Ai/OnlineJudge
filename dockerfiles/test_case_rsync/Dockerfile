@@ -1,6 +1,6 @@
-FROMM ubuntu:14.04
+FROM ubuntu:14.04
 RUN apt-get update && apt-get -y install rsync
-RUN mkdir /code /etc/rsyncd/
+RUN mkdir /code /code/log /etc/rsyncd/
 ADD rsyncd.conf /etc/rsyncd/rsyncd.conf
 ADD rsyncd.sh /code/rsyncd.sh
 COPY run.sh /code

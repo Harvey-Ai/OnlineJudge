@@ -2,6 +2,7 @@ oj_rsync_master:
     image: oj_rsync
     volumes:
         - /home/OnlineJudge:/OnlineJudge
+        - /home/log:/code/log
     environment:
         - RSYNC_MODE=master
 
